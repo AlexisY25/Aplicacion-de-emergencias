@@ -1,4 +1,4 @@
-import { ActivityIndicator, StyleSheet, Text, View, Button, Image, Alert, StatusBar as RNStatusBar } from 'react-native';
+import { ActivityIndicator,StyleSheetProperties, StyleSheet, Text, View, Button, Image, Alert, StatusBar as RNStatusBar } from 'react-native';
 import { SQLiteProvider } from 'expo-sqlite/next';
 import * as SQLite from 'expo-sqlite/legacy';
 import * as FileSystem from 'expo-file-system';
@@ -136,12 +136,13 @@ export default function App() {
           useSuspense
         >
           <Stack.Navigator>
-            <Stack.Screen
+            <Stack.Screen 
               name='Home'
               component={Principal}
               options={{
                 headerTitle: "Aplicación 911",
-                headerLargeTitle: true
+                headerLargeTitle: true,
+                headerTintColor:'red'
               }}
             />
           </Stack.Navigator>
@@ -170,4 +171,7 @@ const styles = StyleSheet.create({
     height: 200,
     marginTop: 20,
   },
+  titulo:{
+    color:'red'
+  }
 });

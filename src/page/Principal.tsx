@@ -21,14 +21,6 @@ import DateTimePicker from '@react-native-community/datetimepicker';
 
 library.add(faTrashAlt, faEdit);
 
-interface Emergencia {
-  id: number;
-  date: string;
-  title: string;
-  description: string;
-  photo: string;
-}
-
 export default function Home() {
   const db = SQLite.openDatabase('parcial2.db');
   const [emergencia, setEmergencia] = useState<Emergencia[]>([]);
@@ -248,7 +240,8 @@ export default function Home() {
 
 const styles = StyleSheet.create({
   formContainer: {
-    marginBottom: 20,
+    marginBottom: 40,
+    marginTop: 85,
     padding: 10,
     backgroundColor: '#f9f9f9',
     borderRadius: 5,
